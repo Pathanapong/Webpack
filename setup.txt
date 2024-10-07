@@ -68,4 +68,31 @@ git init
 เพื่อให้แน่ใจว่าคุณจะไม่ push ไฟล์ที่ไม่จำเป็น (เช่น ไฟล์จาก node_modules) คุณควรสร้างไฟล์ .gitignore
 
 3. เพิ่มไฟล์ทั้งหมดใน repository
+เพิ่มไฟล์ทั้งหมดที่คุณต้องการ commit โดยใช้คำสั่ง
 git add .
+
+4. ทำการ commit ไฟล์
+ทำการ commit ไฟล์ด้วยข้อความอธิบายการเปลี่ยนแปลง:
+git commit -m "Initial commit"
+
+5. สร้าง repository บน GitHub
+ไปที่ GitHub และเข้าสู่ระบบ (หากยังไม่มีบัญชีให้ทำการสมัคร)
+คลิกที่ปุ่ม New หรือไปที่หน้า Repositories แล้วเลือก New Repository
+ตั้งชื่อ repository และเลือก Public หรือ Private ตามต้องการ จากนั้นคลิก Create repository
+
+6. เชื่อมต่อ Git ในเครื่องกับ GitHub
+หลังจากสร้าง repository บน GitHub คุณจะได้รับคำแนะนำในการเชื่อมต่อ repository ในเครื่องของคุณกับ GitHub
+ใน Terminal ให้ใช้คำสั่งที่ GitHub ให้มา เช่น:
+git remote add origin https://github.com/username/repository-name.git
+
+7. Push โค้ดไปยัง GitHub
+git push -u origin master
+
+8. ตรวจสอบโค้ดบน GitHub
+เมื่อทำการ push เสร็จสิ้น ให้คุณไปที่หน้า repository บน GitHub ของคุณเพื่อดูโค้ดที่ถูก push ขึ้นไป
+
+หมายเหตุ
+หากต้องการแก้ไขหรืออัปเดตโค้ดในภายหลัง ใช้คำสั่ง:
+git add .
+git commit -m "Your update message"
+git push
