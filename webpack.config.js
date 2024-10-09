@@ -2,13 +2,18 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    clean: true, // ลบไฟล์เก่าใน dist
+   // กำหนดหลาย entry points
+   entry: {
+    login: './src/login.js',
+    index: './src/index.js'
   },
-  mode: 'development',
+  output: {
+    // ใช้ [name] เพื่อให้ Webpack ตั้งชื่อไฟล์ตาม entry point
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    clean: true,
+  },
+  mode: 'production',
   module: {
     rules: [
       {
