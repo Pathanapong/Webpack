@@ -28,18 +28,18 @@ module.exports = {
       },
     ],
   },
-//   plugins: [
-//     new HtmlWebpackPlugin({
-//       template: './src/index.html', // ใช้ไฟล์ HTML ที่เราเพิ่งสร้าง
-//       filename: 'index.html',
-//     }),
-//   ],
-//   devServer: {
-//     static: {
-//       directory: path.join(__dirname, 'dist'),
-//     },
-//     compress: true,
-//     port: 3000,
-//     open: true,
-//   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html', // ใช้ไฟล์ HTML ที่เราเพิ่งสร้าง
+      filename: 'index.html',
+    }),
+  ],
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
+    compress: true,
+    port: 3000,
+    open: true,
+  },
 };
