@@ -26,7 +26,7 @@ npm install --save-dev webpack webpack-cli
 npm run build
 
 9. พัฒนาเพิ่มเติม
-npm install --save-dev style-loader css-loader
+npm install --save-dev sass-loader sass css-loader style-loader
 
 สรุปขั้นตอนหลัก:
 สร้างโปรเจ็กต์และไฟล์พื้นฐาน

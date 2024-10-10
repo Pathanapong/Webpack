@@ -16,24 +16,30 @@ module.exports = {
   mode: 'production',
   module: {
     rules: [
+      // กฎสำหรับไฟล์ CSS
       {
-        test: /\.css$/, // ตรวจสอบไฟล์ CSS
+        test: /\.css$/, // จับเฉพาะไฟล์ .css
         use: ['style-loader', 'css-loader'], // ใช้ style-loader และ css-loader
+      },
+      // กฎสำหรับไฟล์ SCSS
+      {
+        test: /\.scss$/, // จับเฉพาะไฟล์ .scss
+        use: ['style-loader', 'css-loader', 'sass-loader'], // ใช้ style-loader, css-loader, และ sass-loader
       },
     ],
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/index.html', // ใช้ไฟล์ HTML ที่เราเพิ่งสร้าง
-      filename: 'index.html',
-    }),
-  ],
-  devServer: {
-    static: {
-      directory: path.join(__dirname, 'dist'),
-    },
-    compress: true,
-    port: 3000,
-    open: true,
-  },
+//   plugins: [
+//     new HtmlWebpackPlugin({
+//       template: './src/index.html', // ใช้ไฟล์ HTML ที่เราเพิ่งสร้าง
+//       filename: 'index.html',
+//     }),
+//   ],
+//   devServer: {
+//     static: {
+//       directory: path.join(__dirname, 'dist'),
+//     },
+//     compress: true,
+//     port: 3000,
+//     open: true,
+//   },
 };
