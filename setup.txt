@@ -1,0 +1,100 @@
+Install x
+
+1. สร้างโปรเจ็กต์ใหม่
+เปิด VSCode และสร้างโฟลเดอร์ใหม่สำหรับโปรเจ็กต์ของคุณ จากนั้นเปิดโฟลเดอร์นั้นใน VSCode
+
+2. ติดตั้ง Node.js และ NPM
+node -v
+npm -v
+
+3. สร้างไฟล์ package.json
+npm init -y
+
+4. ติดตั้ง Webpack และ Webpack CLI
+npm install --save-dev webpack webpack-cli
+
+5. สร้างโครงสร้างไฟล์
+├── src/
+│   └── index.js
+├── dist/
+└── package.json
+
+6. สร้างไฟล์ Webpack Configuration (webpack.config.js)
+
+7. สร้าง Script สำหรับการรัน Webpack
+แก้ไขไฟล์ package.json เพื่อเพิ่ม script สำหรับการรัน Webpack:
+
+8. รัน Webpack
+npm run build
+
+9. พัฒนาเพิ่มเติม
+npm install --save-dev sass-loader sass css-loader style-loader
+
+สรุปขั้นตอนหลัก:
+สร้างโปรเจ็กต์และไฟล์พื้นฐาน
+ติดตั้ง Webpack และสร้างไฟล์ webpack.config.js
+ใช้คำสั่ง npm run build เพื่อรวมไฟล์ต่างๆ
+
+*************************************************************************************************************************************************
+Run web ทดสอบ
+
+1. ติดตั้ง webpack-dev-server
+npm install --save-dev webpack-dev-server
+
+2. ปรับแต่ง webpack.config.js
+
+3. เพิ่ม Script สำหรับรัน webpack-dev-server
+
+4. รันเซิร์ฟเวอร์
+npm start
+
+หมายเหตุ
+การปรับปรุงแบบเรียลไทม์: เมื่อคุณทำการเปลี่ยนแปลงไฟล์ในโฟลเดอร์ src, webpack-dev-server จะทำการรีเฟรชเบราว์เซอร์อัตโนมัติเพื่อแสดงการเปลี่ยนแปลงทันที
+การใช้งาน HTTPS: หากคุณต้องการรันเซิร์ฟเวอร์ด้วย HTTPS สามารถเพิ่มตัวเลือก https: true ในการตั้งค่า devServer ได้
+สรุป
+การตั้งค่า webpack-dev-server ช่วยให้คุณสามารถพัฒนาและทดสอบโปรเจ็กต์ได้ง่ายขึ้นด้วยการรีเฟรชหน้าแบบเรียลไทม์ ทำให้ประสบการณ์การพัฒนาเป็นไปอย่างราบรื่นและมีประสิทธิภาพ!
+
+*************************************************************************************************************************************************
+Github
+
+ตรวจสอบว่าติดตั้ง Git แล้วหรือไม่ --> ไปที่ Git Download Page: https://git-scm.com/downloads
+
+ตั้งค่า HTTP Proxy
+git config --global http.proxy http://192.168.3.1:3128
+
+1. สร้าง Git repository ในเครื่องของคุณ
+เปิด Terminal ใน VSCode และใช้คำสั่งต่อไปนี้เพื่อเริ่มต้น Git ในโฟลเดอร์โปรเจกต์ของคุณ
+git init
+
+2. สร้างไฟล์ .gitignore
+เพื่อให้แน่ใจว่าคุณจะไม่ push ไฟล์ที่ไม่จำเป็น (เช่น ไฟล์จาก node_modules) คุณควรสร้างไฟล์ .gitignore
+
+3. เพิ่มไฟล์ทั้งหมดใน repository
+เพิ่มไฟล์ทั้งหมดที่คุณต้องการ commit โดยใช้คำสั่ง
+git add .
+
+4. ทำการ commit ไฟล์
+ทำการ commit ไฟล์ด้วยข้อความอธิบายการเปลี่ยนแปลง:
+git commit -m "Initial commit"
+
+5. สร้าง repository บน GitHub
+ไปที่ GitHub และเข้าสู่ระบบ (หากยังไม่มีบัญชีให้ทำการสมัคร)
+คลิกที่ปุ่ม New หรือไปที่หน้า Repositories แล้วเลือก New Repository
+ตั้งชื่อ repository และเลือก Public หรือ Private ตามต้องการ จากนั้นคลิก Create repository
+
+6. เชื่อมต่อ Git ในเครื่องกับ GitHub
+หลังจากสร้าง repository บน GitHub คุณจะได้รับคำแนะนำในการเชื่อมต่อ repository ในเครื่องของคุณกับ GitHub
+ใน Terminal ให้ใช้คำสั่งที่ GitHub ให้มา เช่น:
+git remote add origin https://github.com/username/repository-name.git
+
+7. Push โค้ดไปยัง GitHub
+git push -u origin master
+
+8. ตรวจสอบโค้ดบน GitHub
+เมื่อทำการ push เสร็จสิ้น ให้คุณไปที่หน้า repository บน GitHub ของคุณเพื่อดูโค้ดที่ถูก push ขึ้นไป
+
+หมายเหตุ
+หากต้องการแก้ไขหรืออัปเดตโค้ดในภายหลัง ใช้คำสั่ง:
+git add .
+git commit -m "Your update message"
+git push

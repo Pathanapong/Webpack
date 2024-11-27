@@ -1,0 +1,1 @@
+document.getElementById("loginForm").addEventListener("submit",(function(e){e.preventDefault();const n=document.getElementById("username").value,t=document.getElementById("password").value;document.getElementById("message").innerText="admin"===n&&"password"===t?"Login successful!":"Invalid username or password."}));
