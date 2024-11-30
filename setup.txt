@@ -98,3 +98,9 @@ git push -u origin master
 git add .
 git commit -m "Your update message"
 git push
+
+- ดึงข้อมูลก่อน (Pull) หากรีโมตมี commit ใหม่ที่คุณยังไม่ได้รวม:
+git pull origin master --rebase
+
+- หากรีโมตมี commit ที่ขัดแย้งและคุณต้องการเขียนทับ:
+git push origin master --force
