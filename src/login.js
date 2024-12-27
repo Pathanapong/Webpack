@@ -1,5 +1,7 @@
 // src/login.js
 document.getElementById('loginForm').addEventListener('submit', function (e) {
+    console.log('test2');
+    
     e.preventDefault(); // หยุดการส่งฟอร์ม
 
     const username = document.getElementById('username').value;

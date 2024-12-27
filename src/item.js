@@ -1,2 +1,11 @@
+export function showItem() {
+  console.log('showItem');
+}
 
-console.log('test 1qwer');
+export function showUser() {
+    console.log('15234');
+}
+
+function test(){
+    console.log('test');
+}

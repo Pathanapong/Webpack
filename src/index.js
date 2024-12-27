@@ -1,5 +1,8 @@
 // src/index.js
-import './style.css';
 import './styles.scss';
+import './style.css';
 import './login.js';
-console.log('test');
+import * as item from './item.js';
+console.log('test4');
+item.showItem();
+item.showUser();
