@@ -4,8 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: {
         login: './src/login.js',
-        index: './src/index.js',
-        item: './src/item.js'
+        index: './src/index.js'
     },
     output: {
         filename: '[name].bundle.js',
@@ -26,18 +25,18 @@ module.exports = {
         ],
     },
     watch: true, 
-    // plugins: [
-    //     new HtmlWebpackPlugin({
-    //         template: './src/index.html',
-    //         filename: 'index.html',
-    //     }),
-    // ],
-    // devServer: {
-    //     static: {
-    //         directory: path.join(__dirname, 'dist'),
-    //     },
-    //     compress: true,
-    //     port: 3000,
-    //     open: true
-    // }
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './src/index.html',
+            filename: 'index.html',
+        }),
+    ],
+    devServer: {
+        static: {
+            directory: path.join(__dirname, 'dist'),
+        },
+        compress: true,
+        port: 3000,
+        open: true
+    }
 };

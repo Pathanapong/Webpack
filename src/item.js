@@ -3,9 +3,10 @@ export function showItem() {
 }
 
 export function showUser() {
-    console.log('15234');
+    console.log('15234xxxx');
+    test();
 }
 
 function test(){
-    console.log('test');
+    console.log('test+++');
 }

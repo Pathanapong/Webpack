@@ -159,7 +159,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   showItem: () => (/* binding */ showItem),\n/* harmony export */   showUser: () => (/* binding */ showUser)\n/* harmony export */ });\nfunction showItem() {\r\n  console.log('showItem');\r\n}\r\n\r\nfunction showUser() {\r\n    console.log('15234');\r\n}\r\n\r\nfunction test(){\r\n    console.log('test');\r\n}\n\n//# sourceURL=webpack://webpack/./src/item.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   showItem: () => (/* binding */ showItem),\n/* harmony export */   showUser: () => (/* binding */ showUser)\n/* harmony export */ });\nfunction showItem() {\r\n  console.log('showItem');\r\n}\r\n\r\nfunction showUser() {\r\n    console.log('15234xxxx');\r\n    test();\r\n}\r\n\r\nfunction test(){\r\n    console.log('test+++');\r\n}\n\n//# sourceURL=webpack://webpack/./src/item.js?");
 
 /***/ }),
 
