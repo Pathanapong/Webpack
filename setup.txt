@@ -46,7 +46,7 @@ npm install --save-dev webpack-dev-server
 3. เพิ่ม Script สำหรับรัน webpack-dev-server
 
 4. รันเซิร์ฟเวอร์
-npm start
+npm run start
 
 หมายเหตุ
 การปรับปรุงแบบเรียลไทม์: เมื่อคุณทำการเปลี่ยนแปลงไฟล์ในโฟลเดอร์ src, webpack-dev-server จะทำการรีเฟรชเบราว์เซอร์อัตโนมัติเพื่อแสดงการเปลี่ยนแปลงทันที
